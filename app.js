@@ -27,7 +27,15 @@ app.get("/Integration" , (req , res)=>{
 app.get('/setting', (req, res) => {
   res.render('setting.ejs'); // Render the setting.ejs view
 });
-
+app.get("/order" , (req,res)=>{
+  res.render("order.ejs")
+})
+app.get("/sales" , (req,res)=>{
+  res.render("sales.ejs")
+})
+app.get("/logistics" , (req,res)=>{
+  res.render("logistics.ejs")
+})
 app.listen(port, () => {
   console.log(`Server chal raha hai http://localhost:${port}`);
 });
