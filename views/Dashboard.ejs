@@ -4,25 +4,111 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="Home.css">
+   <title>SupplyChainAI</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- <link rel="stylesheet" href=""> -->
+    <link rel="stylesheet" href="/Style/style.css">
+
 </head>
 
 <body>
-   <nav>
-      <h1>SupplyChainAI</h1>
-      <ul>
+     <div class="container">
+    <!-- Menu Bar -->
+    <div class="menubar">
+        <button id="menu-bar">
+            <i class="ri-menu-line"></i> 
+        </button>
+    </div>
 
-         <li><a href="/"><i class="fa-solid fa-house" id="one"></i> Home</a></li>
-         <li><a href="/Dashboard"><i class="fa-solid fa-gauge" id="two"></i> Dashboard</a></li>
-         <li><a href="/inventory"><i class="fa-solid fa-truck-ramp-box" id="three"></i> Inventory</a></li>
-         <li><a href="/Integration"><i class="fa-solid fa-radiation" id="four"></i> Integrations</a></li>
-         <li><a href="/setting"><i class="fa-solid fa-gear" id="four"></i> Setting</a></li>
-      </ul>
-   </nav>
+    <!-- Sidebar for small screen size --> 
+    <div id="sidebar1">
+        <div class="sidebar1-header">
+            <h1 class="logo1">Supply <span>Chain</span></h1>
+            <button id="close-sidebar"><i class="ri-close-line"></i></button>
+        </div>
+
+        <ul class="sidebar1-links">
+            <li class="sidebar1-link"><i class="ri-home-line"></i><a href="/">Home</a></li>
+            <li class="sidebar1-link"><a href="/Dashboard"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+            <li class="sidebar1-link"><i class="ri-calendar-view"></i><a href="#">Inventory</a></li>
+            <li class="sidebar1-link"><i class="fa-solid fa-cart-shopping"></i><a href="#">Order</a></li>
+            <li class="sidebar1-link"><i class="ri-truck-line"></i><a href="#">Logistics</a></li>
+            <li class="sidebar1-link"><i class="ri-percent-line"></i><a href="#">Sales</a></li>
+            <li class="sidebar1-link"><i class="ri-settings-2-line"></i><a href="#">Setting</a></li>
+        </ul>
+    </div>
+
+    <!-- sidebar for large screen size -->
+     <div id="sidebar2">
+        <div class="sidebar2-logo">
+            <h1 class="logo2">
+                Supply <span>Chain</span>
+            </h1>
+        </div>
+
+        <ul class="sidebar2-links">
+            <li class="sidebar2-link"><i class="ri-home-line"></i><a href="/">Home</a></li>
+            <li class="sidebar1-link"><a href="/Dashboard"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+            <li class="sidebar2-link"><i class="ri-calendar-view"></i><a href="/inventory">Inventory</a></li>
+            <li class="sidebar2-link"><i class="fa-solid fa-cart-shopping"></i><a href="">Order</a></li>
+            <li class="sidebar2-link"><i class="ri-truck-line"></i><a href="#">Logistics</a></li>
+            <li class="sidebar2-link"><i class="ri-percent-line"></i><a href="#">Sales</a></li>
+            <li class="sidebar2-link"><i class="ri-settings-2-line"></i><a href="/setting">Setting</a>
+            </li>
+        </ul>
+     </div>
+
+<!-- main-content -->
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+                <h2 class="dashboard">
+                        <a href="/">Dashboard</a>
+                    <div class="date">
+                    <input type="date">
+                </div>
+            </h2>
+
+                <div class="greeting">
+                    <h3> Welcome!</h3>
+                    <h2>Admin <i class="fa-solid fa-circle-user"></i></h2>
+                    <p id="greeting"></p> 
+                </div>
+               
+                <!-- <div class="toggle-btn">
+                    <button><i class="fa-solid fa-sun"></i></button>
+                    <button><i class="fa-solid fa-moon"></i></button>
+                </div> -->
+        </header>
+        <p>Your Integrated AI-powered for modern supply chain management</p>
+        <div class="cards">
+            <div class="card">
+                <h3>Total Inventory: 5000</h3>
+            </div>
+            <div class="card">
+                <h3>Orders in Transit: 1200</h3>
+            </div>
+            <div class="card">
+                <h3>Total Sales: $10,000</h3>
+            </div>
+        </div>
+        <!-- Analytics -->
+        <div class="analytics">
+            <div class="ai-prediction" style="background-image: url('https://appinventiv.com/wp-content/uploads/2019/08/top_ai_trends_in_2024_transforming_businesses_across_industries.webp'); background-repeat: no-repeat; background-size: cover;">
+                <canvas id="aiChart"></canvas>
+            </div>
+            <div class="ai-prediction" style="background-image: url('https://www.grandviewresearch.com/static/img/research/global-supply-chain-management-market.png'); background-repeat: no-repeat; background-size: cover;">
+                <canvas id="aiChart"></canvas>
+            </div>            
+        </div>
+        <div class="sales-analytics" style="background-image: url('https://i0.wp.com/porteconomicsmanagement.org/wp-content/uploads/Map-Passages-with-Shipping-Routes.png?resize=900%2C450&ssl=1');">
+            <canvas id="salesChar"></canvas>
+        </div>
+    </div>     
+</div>
+
+<script src="/Script/script.js"></script>
 </body>
 
 </html>

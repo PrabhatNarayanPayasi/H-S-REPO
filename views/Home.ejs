@@ -4,37 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SupplyChainAI</title>
     <link href="..public/Home.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="Home.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="/Style/style.css">
 </head>
 <style>
 
 </style>
 
 <body>
-    <div class="con">
-        <nav>
-            <h1>SupplyChainAI</h1>
-            <ul>
-         
-                <li><a href="/"><i class="fa-solid fa-house" id="one"></i> Home</a></li>
-                <li><a href="/Dashboard"><i class="fa-solid fa-gauge" id="two"></i> Dashboard</a></li>
-                <li><a href="/inventory"><i class="fa-solid fa-truck-ramp-box" id="three"></i> Inventory</a></li>
-                <li><a href="/Integration"><i class="fa-solid fa-radiation" id="four"></i> Integrations</a></li>
-                <li><a href="/setting"><i class="fa-solid fa-gear" id="four"></i> Setting</a></li>
-            </ul>
-        </nav>
-        <div class="right">
-            <div class="user">Welcome, User &nbsp; <i class="fa-solid fa-circle-user"></i></div>
-            <h2>Welcome To Supply Chain Optimizer </h2>
-            <p>Your Integrated AI-powered for modern supply chain management</p>
+    <div class="con">        
+   <div class="container">
+    <!-- Menu Bar -->
+    <div class="menubar">
+        <button id="menu-bar">
+            <i class="ri-menu-line"></i> 
+        </button>
+    </div>
 
+    <!-- Sidebar for small screen size --> 
+    <div id="sidebar1">
+        <div class="sidebar1-header">
+            <h1 class="logo1">Supply <span>Chain</span></h1>
+            <button id="close-sidebar"><i class="ri-close-line"></i></button> <!--Close Icon-->
+        </div>
+
+        <ul class="sidebar1-links">
+            <li class="sidebar1-link"><a href="/"><i class="ri-home-line"></i>Home</a></li>
+            <li class="sidebar1-link"><a href="/Dashboard"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+            <li class="sidebar1-link"><a href="/inventory"><i class="ri-calendar-view"></i>Inventory</a></li>
+            <li class="sidebar1-link"><i class="fa-solid fa-cart-shopping"></i><a href="/order">Order</a></li>
+            <li class="sidebar1-link"><i class="ri-truck-line"></i><a href="/logistics">Logistics</a></li>
+            <li class="sidebar1-link"><i class="ri-percent-line"></i><a href="/sales">Sales</a></li>
+            <li class="sidebar1-link"><i class="ri-settings-2-line"></i><a href="/setting">Setting</a></li>
+        </ul>
+    </div>
+
+    <!-- sidebar for large screen size -->
+     <div id="sidebar2">
+        <div class="sidebar2-logo">
+            <h1 class="logo2">
+                Supply <span>Chain</span>
+            </h1>
+        </div>
+
+        <ul class="sidebar2-links">
+            <li class="sidebar2-link"><i class="ri-home-line"></i><a href="/">Home</a></li>
+            <li class="sidebar2-link"><a href="/Dashboard"><i class="fa-solid fa-gauge"></i> Dashboard</a></li>
+            <li class="sidebar2-link"><i class="ri-calendar-view"></i><a href="/inventory">Inventory</a></li>
+            <li class="sidebar2-link"><i class="fa-solid fa-cart-shopping"></i><a href="/order">Order</a></li>
+            <li class="sidebar2-link"><i class="ri-truck-line"></i><a href="/logistics">Logistics</a></li>
+            <li class="sidebar2-link"><i class="ri-percent-line"></i><a href="/sales">Sales</a></li>
+            <li class="sidebar2-link"><i class="ri-settings-2-line"></i><a href="/setting">Setting</a>
+            </li>
+        </ul>
+     </div>
+
+
+     <!-- home section -->
+        <div class="right">
+            <header>
+                <h2 class="Home">
+                <a href="/">Home</a>
+                <div class="date">
+                    <input type="date">
+                </div>
+            </h2>
+
+                <div class="greeting">
+                    <h3> Welcome!</h3>
+                    <h2>Admin <i class="fa-solid fa-circle-user"></i></h2>
+                    <p id="greeting"></p> 
+                </div>
+               
+                <!-- <div class="toggle-btn">
+                    <button><i class="fa-solid fa-sun"></i></button>
+                    <button><i class="fa-solid fa-moon"></i></button>
+                </div> -->
+        </header>
+
+        <p>Your Integrated AI-powered for modern supply chain management</p>
             <div class="main-box">
-                <div class="main-left"></div>
+                <div class="main-left">
+                   <h1>AI- Powered Insights</h1> 
+                   <p>Leverage advanced machine learning algorithms to optimize your entire <br> supply chain process from forecasting to logistics</p>
+                <button><a href="/dashboard"><i class="fa-solid fa-gauge"></i>Go to Dashboard</a></button>
+                </div>
                 <div class="main-right">
                     <div class="mb1">
                         <h2>Active Suppliers</h2>
@@ -56,6 +115,7 @@
             </div>
         </div>
     </div>
+    <script src="/Script/script.js"></script>
 </body>
 
 </html>
