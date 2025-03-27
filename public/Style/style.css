@@ -531,3 +531,6 @@ canvas {
     color: #690086;
 }
 
+li:hover{
+    text-shadow: 1px 2px 3px #690086;
+}
